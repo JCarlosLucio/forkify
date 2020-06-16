@@ -2,6 +2,7 @@
 // URL for API: http://forkify-api.herokuapp.com/
 
 import Search from './models/Search';
+import * as searchView from './views/searchView';
 import { elements } from './views/base';
 
 // Global state
