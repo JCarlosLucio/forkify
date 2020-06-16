@@ -7,6 +7,10 @@ export const clearInput = () => {
   elements.searchInput.value = '';
 };
 
+export const clearResults = () => {
+  elements.searchResList.textContent = '';
+};
+
 const renderRecipe = (recipe) => {
   const markup = `
     <li>
