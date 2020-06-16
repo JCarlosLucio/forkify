@@ -14,8 +14,8 @@ const state = {};
 
 const controlSearch = async () => {
   // 1. Get query from view
-  const query = 'pizza'; // TODO in searchView
-
+  const query = searchView.getInput(); // TODO in searchView
+  console.log(query);
   if (query) {
     // 2. Create new Search object and add to state
     state.search = new Search(query);
