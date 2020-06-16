@@ -27,3 +27,8 @@ const controlSearch = async () => {
     console.log(state.search.result);
   }
 };
+
+document.querySelector('.search').addEventListener('submit', (e) => {
+  e.preventDefault();
+  controlSearch();
+});
