@@ -10,7 +10,20 @@ import Search from './models/Search';
 // - Liked recipes
 const state = {};
 
-const search = new Search('pizza');
+const controlSearch = async () => {
+  // 1. Get query from view
+  const query = 'pizza'; // TODO in searchView
 
-console.log(search);
-search.getResults();
+  if (query) {
+    // 2. Create new Search object and add to state
+    state.search = new Search(query);
+
+    // 3. Prepare UI for results
+
+    // 4. Search for recipes
+    await state.search.getResults();
+
+    // 5. Render results on UI
+    console.log(state.search.result);
+  }
+};
