@@ -9,6 +9,7 @@ export const clearInput = () => {
 
 export const clearResults = () => {
   elements.searchResList.textContent = '';
+  elements.searchResPages.textContent = '';
 };
 
 // 'Pasta with tomato and spinach' example for limitRecipe reduce
