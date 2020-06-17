@@ -4,7 +4,7 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', { singleQuote: true }],
     'no-console': 'off',
-    'no-undef': 'off',
+    // 'no-undef': 'off',
     // 'import/prefer-default-export': 'off',
     // 'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
