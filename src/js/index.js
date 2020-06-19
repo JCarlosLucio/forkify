@@ -51,3 +51,5 @@ elements.searchResPages.addEventListener('click', (e) => {
 });
 
 // RECIPE CONTROLLER
+
+windows.addEventListener('hashchange', controlRecipe);
