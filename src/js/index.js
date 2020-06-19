@@ -58,6 +58,7 @@ const controlRecipe = async () => {
   console.log(id);
   if (id) {
     // 2. Create new Recipe object and add to state
+    state.recipe = new Recipe(id);
     // 3. Prepare UI for recipe
     // 4. Get recipe data
     // 5. Calc servings/time
