@@ -56,16 +56,25 @@ const controlRecipe = async () => {
   // 1. Get id from url hash
   const id = window.location.hash.replace('#', '');
   console.log(id);
+
   if (id) {
     // 2. Create new Recipe object and add to state
     state.recipe = new Recipe(id);
+
     // 3. Prepare UI for recipe
-    // 4. Get recipe data
-    await state.recipe.getRecipe();
-    // 5. Calc servings/time
-    state.recipe.calcTime();
-    state.recipe.calcServings();
-    // 6. Render recipe on UI
+
+    try {
+      // 4. Get recipe data
+      await state.recipe.getRecipe();
+
+      // 5. Calc servings/time
+      state.recipe.calcTime();
+      state.recipe.calcServings();
+
+      // 6. Render recipe on UI
+    } catch (error) {
+      console.log('Error processing recipe!', error);
+    }
   }
 };
 
