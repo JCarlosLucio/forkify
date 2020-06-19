@@ -52,4 +52,12 @@ elements.searchResPages.addEventListener('click', (e) => {
 
 // RECIPE CONTROLLER
 
-windows.addEventListener('hashchange', controlRecipe);
+const controlRecipe = async () => {
+  // 1. Get id from hashchange
+  // 2. Create new Recipe object and add to state
+  // 3. Prepare UI for recipe
+  // 4. Search for recipe
+  // 5. Render recipe on UI
+};
+
+window.addEventListener('hashchange', controlRecipe);
