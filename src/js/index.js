@@ -68,6 +68,7 @@ const controlRecipe = async () => {
     state.recipe = new Recipe(id);
 
     // 3. Prepare UI for recipe
+    renderLoader(elements.recipe);
 
     try {
       // 4. Get recipe data and parse ingredients
@@ -79,6 +80,7 @@ const controlRecipe = async () => {
       state.recipe.calcServings();
 
       // 6. Render recipe on UI
+      clearLoader();
       recipeView.renderRecipe(state.recipe);
     } catch (error) {
       console.log('Error processing recipe!', error);
