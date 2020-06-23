@@ -68,6 +68,7 @@ const controlRecipe = async () => {
     state.recipe = new Recipe(id);
 
     // 3. Prepare UI for recipe
+    recipeView.clearRecipe();
     renderLoader(elements.recipe);
 
     try {
