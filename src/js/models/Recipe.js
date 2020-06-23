@@ -53,6 +53,7 @@ export default class Recipe {
       'cup',
       'pound',
     ];
+    const units = [...unitsShort, 'kg', 'g'];
 
     const calcDivisionString = (str = '0/1') => {
       const arrDiv = str.split('/');
@@ -68,7 +69,7 @@ export default class Recipe {
       // 1. Uniform units
       let ingredient = el.toLowerCase();
       unitsLong.forEach((unit, i) => {
-        ingredient = ingredient.replace(unit, unitsShort[i]);
+        ingredient = ingredient.replace(unit, units[i]);
       });
 
       // 2. Remove parentheses
@@ -76,7 +77,7 @@ export default class Recipe {
 
       // 3. Parse ingredients into count, unit and, ingredient
       const arrIng = ingredient.split(' ');
-      const unitIndex = arrIng.findIndex((el2) => unitsShort.includes(el2));
+      const unitIndex = arrIng.findIndex((el2) => units.includes(el2));
 
       let objIng;
       if (unitIndex > -1) {
