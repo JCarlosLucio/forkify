@@ -79,6 +79,7 @@ const controlRecipe = async () => {
       state.recipe.calcServings();
 
       // 6. Render recipe on UI
+      recipeView.renderRecipe(state.recipe);
     } catch (error) {
       console.log('Error processing recipe!', error);
     }
