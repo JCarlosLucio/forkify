@@ -83,4 +83,5 @@ export const renderRecipe = (recipe) => {
       </a>
     </div>
   `;
+  elements.recipe.insertAdjacentHTML('afterbegin', markup);
 };
