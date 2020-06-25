@@ -13,4 +13,11 @@ export default class List {
       ingredient,
     };
   }
+
+  deleteItem(id) {
+    // [2,4,8].splice(1,1) -> return 4, original array is [2,8]
+    // [2,4,8].slice(1,1) -> return 4, original array is [2,4,8]
+    const index = this.items.findIndex((el) => el.id === id);
+    this.items.splice(index, 1);
+  }
 }
