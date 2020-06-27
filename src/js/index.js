@@ -103,6 +103,7 @@ const controlRecipe = async () => {
 
 const controlList = () => {
   // Create a new list IF there is none yet
+  if (state.list) state.list = new List();
   // Add each ingredient to the list
   // Render each ingredient on the list
 };
