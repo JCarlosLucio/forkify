@@ -99,6 +99,14 @@ const controlRecipe = async () => {
   window.addEventListener(event, controlRecipe);
 });
 
+// LIST CONTROLLER
+
+const controlList = () => {
+  // Create a new list IF there is none yet
+  // Add each ingredient to the list
+  // Render each ingredient on the list
+};
+
 // Handling recipe btn clicks
 elements.recipe.addEventListener('click', (e) => {
   if (e.target.matches('.btn-decrease, .btn-decrease *')) {
