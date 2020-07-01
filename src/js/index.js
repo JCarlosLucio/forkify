@@ -89,7 +89,7 @@ const controlRecipe = async () => {
 
       // 6. Render recipe on UI
       clearLoader();
-      recipeView.renderRecipe(state.recipe);
+      recipeView.renderRecipe(state.recipe, state.likes.isLiked(id));
     } catch (error) {
       console.log('Error processing recipe!', error);
     }
