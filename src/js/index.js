@@ -147,7 +147,7 @@ const controlLike = () => {
       state.recipe.img
     );
     // Toggle the like button
-
+    likesView.toggleLikeBtn(true);
     // Add like to the UI list
     console.log(state.likes);
     // User HAS liked current recipe
@@ -155,7 +155,7 @@ const controlLike = () => {
     // Remove like from the state.
     state.likes.deleteLike(currentID);
     // Toggle the like button
-
+    likesView.toggleLikeBtn(false);
     // Remove like from the UI list
     console.log(state.likes);
   }
