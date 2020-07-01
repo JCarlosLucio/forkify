@@ -131,6 +131,9 @@ elements.shopping.addEventListener('click', (e) => {
 });
 
 // LIKE CONTROLLER
+const controlLike = () => {
+  if (!state.likes) state.likes = new Likes();
+};
 
 // Handling recipe btn clicks
 elements.recipe.addEventListener('click', (e) => {
