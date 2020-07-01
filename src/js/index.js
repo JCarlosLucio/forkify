@@ -130,6 +130,8 @@ elements.shopping.addEventListener('click', (e) => {
   }
 });
 
+// LIKE CONTROLLER
+
 // Handling recipe btn clicks
 elements.recipe.addEventListener('click', (e) => {
   if (e.target.matches('.btn-decrease, .btn-decrease *')) {
@@ -145,5 +147,8 @@ elements.recipe.addEventListener('click', (e) => {
   } else if (e.target.matches('.recipe__btn--add, .recipe__btn--add *')) {
     // Add ingredients to shopping list
     controlList();
+  } else if (e.target.matches('.recipe__love, .recipe__love *')) {
+    // Like controller
+    controlLike();
   }
 });
