@@ -159,6 +159,7 @@ const controlLike = () => {
     // Remove like from the UI list
     console.log(state.likes);
   }
+  likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
 
 // Handling recipe btn clicks
