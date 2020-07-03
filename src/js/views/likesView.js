@@ -25,7 +25,7 @@ export const renderLike = (like) => {
       </a>
     </li>
   `;
-  elements.likesList.insertAdjacentElement('beforeend', markup);
+  elements.likesList.insertAdjacentHTML('beforeend', markup);
 };
 
 export const deleteLike = (id) => {
