@@ -162,6 +162,19 @@ const controlLike = () => {
   likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
 
+// Restore liked recipes on page load
+window.addEventListener('load', () => {
+  state.likes = new Likes();
+  // Restore likes
+  state.likes.readStorage();
+
+  // Toggle like menu button
+  likesView.toggleLikeMenu(state.likes.getNumLikes());
+
+  // Render the existing likes
+  state.likes.likes.forEach((like) => likesView.renderLike(like));
+});
+
 // Handling recipe btn clicks
 elements.recipe.addEventListener('click', (e) => {
   if (e.target.matches('.btn-decrease, .btn-decrease *')) {
