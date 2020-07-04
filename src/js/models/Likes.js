@@ -11,6 +11,8 @@ export default class Likes {
       img,
     };
     this.likes.push(like);
+    // Persist data in localStorage
+    this.persistData();
     return like;
   }
 
