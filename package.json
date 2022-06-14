@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open",
-    "gh-deploy": "npm run build && git add . && git commit --m 'Upgrade generated dist files' && git push origin master && git subtree push --prefix dist origin gh-pages"
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
