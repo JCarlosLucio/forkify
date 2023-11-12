@@ -34,7 +34,7 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.6.0",
     "core-js": "^3.23.1",
     "fractional": "^1.0.0",
     "regenerator-runtime": "^0.13.9",
